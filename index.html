@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+&gt<!DOCTYPE html>
 <html>
   <head>
     <title>Portfolio</title>
@@ -197,8 +197,8 @@
             </video>
             <div class="phototriple">
               <img src="img/asset17.jpg" alt="img1">
-              <img src="img/asset18.JPG" alt="img1">
-              <img src="img/asset19.JPG" alt="img1">
+              <img src="img/asset18.jpg" alt="img1">
+              <img src="img/asset19.jpg" alt="img1">
             </div>
               <p style="padding:0;">Hosted on the same site, I built upon the skills I had learnt the previous year leading the team as the festival director prioritising  stage/set design and an increased focus on workshops and talent as well as adding a third day. The build this time took 2 weeks and only involved a core team of 3, managing a team of 20 friends lending their expertise from erecting safe structures to sound checks and proper audio setup. Whilst this was the 3rd year, the scale of the event was much larger and with my new role this meant longer hours and more work due to applying for a festival license that we previously did not need. This led to new roles and responsibilities including:</p>
               <div style="justify-content:flex-start;"class="slideemptyul">
@@ -217,11 +217,11 @@
               </div>
               <div class="phototriple">
                 <img src="img/asset40.jpg" alt="img1">
-                <img src="img/asset24.JPG" alt="img1">
+                <img src="img/asset24.jpg" alt="img1">
                 <img src="img/asset25.png" alt="img1">
               </div>
               <div class="photodouble">
-                <img src="img/asset20.JPG" alt="img1">
+                <img src="img/asset20.jpg" alt="img1">
                 <img src="img/asset21.jpg" alt="img1">
               </div>
               <p style="padding:6vh 0 6vh 0;">The workload meant 20+ hour days during the event, however we managed to succeed in ensuring the festival ran smoothly with no incidences of power shutting off or people getting injured. The final night brought a torrential thunderstorm, something which we had not anticipated with the weather forecasting. This led to the site being partially flooded and meant we had to think on our feet to waterproof sections we did not anticipate would need waterproofing, eventually managing to ensure all the sound equipment was watertight through tarps, tents and elevating amplifiers. Whilst it proved extremely stressful achieving this, it meant a very memorable night for the attendees, providing a background of techno and lightning to end the 3 days.</p>
@@ -262,7 +262,7 @@
               <p></p>
               <img src="crtarcademachine.png" alt="">
             </div>
-            <h3 style="z-index:100; cursor:pointer; margin:6vh 0 0 0;"id="codeLink">Check out the code here!</h3>
+            <h3 style="z-index:100; cursor:pointer; margin:6vh 0 0 0;"id="codeLink" class="codelink">Check out the code here!</h3>
 
                       <!-- Popup for the code link -->
                       <div class="popupcode p5code" id="popup5">
@@ -270,22 +270,21 @@
                   <h2>Arduino Script</h2>
                   <pre>
                     <code>
-                    // Sample code
-                    #include <MIDI.h>
-                    #include <MozziGuts.h>
-                    #include <Oscil.h>
-                    #include <mozzi_midi.h>
-                    #include <ADSR.h>
-                    #include <LowPassFilter.h>
-                    #include <AutoMap.h>
-                    #include <tables/saw2048_int8.h>
-                    #include <tables/square_no_alias_2048_int8.h>
-                    #include <tables/cos2048_int8.h>
-                    #include <StateVariable.h>
-                    #include <mozzi_rand.h>
+                    #include &lt;MIDI.h&gt
+                    #include &lt;MozziGuts.h&gt
+                    #include &lt;Oscil.h&gt
+                    #include &lt;mozzi_midi.h&gt
+                    #include &lt;ADSR.h&gt
+                    #include &lt;LowPassFilter.h&gt
+                    #include &lt;AutoMap.h&gt
+                    #include &lt;tables/saw2048_int8.h&gt
+                    #include &lt;tables/square_no_alias_2048_int8.h&gt
+                    #include &lt;tables/cos2048_int8.h&gt
+                    #include &lt;StateVariable.h&gt
+                    #include &lt;mozzi_rand.h&gt
 
-                    Oscil<COS2048_NUM_CELLS, CONTROL_RATE> kFilterMod(COS2048_DATA);
-                    StateVariable <NOTCH> svf;
+                    Oscil&lt;COS2048_NUM_CELLS, CONTROL_RATE&gt kFilterMod(COS2048_DATA);
+                    StateVariable &lt;NOTCH&gt svf;
 
                     #define LFOratePot A1
                     AutoMap LFOratePotMap(0, 1023, 40, 750);
@@ -313,10 +312,10 @@
 
                     #define CONTROL_RATE 128
 
-                    Oscil<SAW2048_NUM_CELLS, AUDIO_RATE> oscil1;
-                    Oscil<SQUARE_NO_ALIAS_2048_NUM_CELLS, AUDIO_RATE> oscil2;
+                    Oscil&lt;SAW2048_NUM_CELLS, AUDIO_RATE&gt oscil1;
+                    Oscil&lt;SQUARE_NO_ALIAS_2048_NUM_CELLS, AUDIO_RATE&gt oscil2;
 
-                    ADSR<CONTROL_RATE, AUDIO_RATE> envelope;
+                    ADSR&lt;CONTROL_RATE, AUDIO_RATE&gt envelope;
 
                     #define LED 13
 
@@ -376,7 +375,7 @@
                     }
 
                     int updateAudio() {
-                      int asig = (envelope.next() * oscil1.next()) >> 10;
+                      int asig = (envelope.next() * oscil1.next()) &gt&gt 10;
                       int asigSVF = svf.next(asig);
                       int asigLPF = lpf.next(asigSVF);
                       return asigLPF;
@@ -401,22 +400,21 @@
               <img src="djpressureblender.png" alt="">
 
             </div>
-            <h3 style="z-index:100; cursor:pointer; margin:6vh 0 0 0;"id="codeLink">Check out the code here!</h3>
+            <h3 style="z-index:100; cursor:pointer; margin:6vh 0 0 0;" id="otherCodeLink" class="codelink">Check out the code here!</h3>
 
-            <!-- Popup for the code link -->
-            <div class="popupcode p5code" id="popup5">
-              <div class="popup-content popup-content-code" >
+<div class="popupcode p5code" id="popup6">
+    <div class="popup-content popup-content-code">
         <h2>Python Script</h2>
         <pre>
           <code>
             import pygame
             import sys
 
-            # Initialize Pygame and Pygame Mixer
+
             pygame.init()
             pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
 
-            # Load your music loops
+
             loop1 = pygame.mixer.Sound('/python/breaks2.ogg')
             loop2 = pygame.mixer.Sound('/python/wobble1.ogg')
             loop3 = pygame.mixer.Sound('/python/wobble2.ogg')
@@ -425,23 +423,23 @@
             loop6 = pygame.mixer.Sound('/python/hihats.ogg')
             loop7 = pygame.mixer.Sound('/python/breaks3.ogg')
             loop8 = pygame.mixer.Sound('/python/melody.ogg')
-            # ... Load other loops similarly
 
-            # Assign each loop to a separate channel and start playing in muted state
+
+
             channels = [pygame.mixer.Channel(i) for i in range(6)]
-            loops = [loop1, loop2, loop3, loop4, loop5, loop6, loop7, loop8] # ... Add other loops here
+            loops = [loop1, loop2, loop3, loop4, loop5, loop6, loop7, loop8]
             for channel, loop in zip(channels, loops):
                 channel.play(loop, loops=-1)
-                channel.set_volume(0)  # Start muted
+                channel.set_volume(0)
 
-            # Function to toggle a loop's mute state
+
             def toggle_mute(channel):
-                if channel.get_volume() > 0:
+                if channel.get_volume() &gt 0:
                     channel.set_volume(0)
                 else:
                     channel.set_volume(1)
 
-            # Main function to handle key presses
+
             def main():
                 running = True
                 while running:
@@ -449,7 +447,7 @@
                         if event.type == pygame.QUIT:
                             running = False
 
-                        # Handle key presses
+
                         if event.type == pygame.KEYDOWN:
                             if pygame.K_1 <= event.key <= pygame.K_6:
                                 toggle_mute(channels[event.key - pygame.K_1])
@@ -459,13 +457,13 @@
                 pygame.quit()
                 sys.exit()
 
-            # Run the main function
+
             if __name__ == "__main__":
                 main()
 
           </code>
         </pre>
-        <h4 id="closeCodePopup">Close</h4>
+        <h4 id="closeOtherPopup" class="closepopupbutton">Close</h4> <!-- Ensure this ID matches in your JS -->
     </div>
           </div>
           </div>
@@ -486,22 +484,7 @@
     </div>
 
 
-    <div class="popup p4" id="popup4">
-        <div class="popup-content">
-          <div class="videosticky">
-            <video id="v1" tabindex="0" autobuffer preload>
-              <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="mov/output3.mp4"></source></video>
-        </div>
-        <div class="content1">
-        </div>
-        </div>
-    </div>
 
-    <div class="popup p5" id="popup5">
-  <div class="popup-content" id="popupContent">
-
-  </div>
-</div>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -712,19 +695,19 @@ closeBtns.forEach(closeBtn => {
 </script> --->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    // Popup functionality for the code link
+    // Popup functionality for the code link (popup5)
     const codeLink = document.getElementById('codeLink');
     const codePopup = document.getElementById('popup5');
-    const closePopupBtn = document.getElementById('closeCodePopup'); // Target the specific close button
+    const closePopupBtn = document.getElementById('closeCodePopup');
 
-    // Open popup when the link is clicked
+    // Open popup5 when the link is clicked
     codeLink.addEventListener('click', () => {
         codePopup.style.display = 'block';
         codePopup.classList.add('slide-in');
         codePopup.querySelector('.popup-content').classList.add('slide-in');
     });
 
-    // Close popup when the close button is clicked
+    // Close popup5 when the close button is clicked
     closePopupBtn.addEventListener('click', () => {
         codePopup.classList.remove('slide-in');
         codePopup.classList.add('slide-out');
@@ -734,6 +717,31 @@ document.addEventListener('DOMContentLoaded', () => {
             codePopup.style.display = 'none';
             codePopup.classList.remove('slide-out');
             codePopup.querySelector('.popup-content').classList.remove('slide-out');
+        }, { once: true });
+    });
+
+    // Popup functionality for the second code link (popup6)
+    const otherLink = document.getElementById('otherCodeLink');
+    const otherPopup = document.getElementById('popup6');
+    const closeOtherPopupBtn = document.getElementById('closeOtherPopup');
+
+    // Open popup6 when the other link is clicked
+    otherLink.addEventListener('click', () => {
+        otherPopup.style.display = 'block';
+        otherPopup.classList.add('slide-in');
+        otherPopup.querySelector('.popup-content').classList.add('slide-in');
+    });
+
+    // Close popup6 when the close button is clicked
+    closeOtherPopupBtn.addEventListener('click', () => {
+        otherPopup.classList.remove('slide-in');
+        otherPopup.classList.add('slide-out');
+        otherPopup.querySelector('.popup-content').classList.remove('slide-in');
+        otherPopup.querySelector('.popup-content').classList.add('slide-out');
+        otherPopup.querySelector('.popup-content').addEventListener('animationend', () => {
+            otherPopup.style.display = 'none';
+            otherPopup.classList.remove('slide-out');
+            otherPopup.querySelector('.popup-content').classList.remove('slide-out');
         }, { once: true });
     });
 });

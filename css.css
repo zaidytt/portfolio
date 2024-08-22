@@ -595,6 +595,10 @@ a:hover {
   cursor: pointer;
 }
 
+.closeCodePopup:hover {
+  color: #5CC6DD;
+}
+
 .popupalter {
   display: flex;
   flex-direction: column;
@@ -611,4 +615,17 @@ a:hover {
 
 .pdouble {
   justify-content: space-around;
+}
+
+.codelink:hover {
+  color: #5CC6DD;
+}
+
+.closepopupbutton {
+  cursor: pointer;
+}
+
+
+.closepopupbutton:hover {
+  color: #5CC6DD;
 }
