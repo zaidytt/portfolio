@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+
+      <div class="container">
+
+        <div class="header" id="indicator">
+          <p>Zade Tuaima</p>
+          <div class="headerbox">
+            <!-- You can add content here for the header box if needed -->
+          </div>
+        </div>
+
+        <div class="intro" id="scrollableElement">
+          <div class="slideempty">
+            <p>Hi, I’m Zade!
+            <br><br>
+            I'm a multi-disciplinary creative with a passion for conceptual design, combining practical design elements with microelectronics and creative coding. I have 4 years’ experience curating events in the electronic music industry, from collaborating with Boilerroom to organising multiple festivals, working a multitude of roles including festival director and creative producer. BSc Biotechnology with Enterprise graduate looking to transfer technical skills and mindset to a creative role.
+            </p>
+            <br>
+            <h1>Skills and Proficiencies</h1>
+            <div class="slideemptyul">
+            <div>
+              <ul>
+                <li>HTML, CSS + JavaScript</li>
+                <li>Microelectronics</li>
+                <li>Python</li>
+                <li>Arduino</li>
+              </ul>
+
+            </div>
+
+              <div>
+                <ul>
+                  <li>Touch Designer</li>
+                  <li>Adobe Photoshop</li>
+                  <li>Adobe Illustrator</li>
+                  <li>Blender</li>
+              </div>
+            </div>
+            </div>
+<div class="slide" data-popup="popup1">
+
+    <img src="img/asset2.jpeg">
+      <div class="slideactivator">
+      </div>
+    <div class="description">
+      Boileroom Bristol Takeover
+    </div>
+
+  </div>
+<div class="slide" data-popup="popup2">
+    <img src="img/asset3.jpg">
+    <div class="slideactivator">
+    </div>
+    <div class="description">
+      The Kaleidoscope Festival
+    </div>
+  </div>
+<div class="slide" data-popup="popup3">
+    <img src="img/asset16.jpg">
+    <div class="slideactivator">
+    </div>
+    <div class="description">
+      Alter Festival
+    </div>
+  </div>
+
+
+
+</div>
+      </div>
+      <!-- Popup for Boilerroom -->
+    <div class="popup p1" id="popup1">
+        <div class="popup-content" >
+          <span class="close">&times;</span>
+            <h1 class="popuph">Bristol Boilerroom Takeover</h1>
+            <p style="padding:6vh 0 0 0;">In April 2023, I was invited to curate the Bristol Boilerroom at SWX. We brought with us a host of up-and-coming talent, including Bristol locals Lily Huu and PHIA500, Eastern Margins' JD X and The Kaleidoscope veteran, Phasmid. This was combined with the brief of ‘DIY’, where I worked to create a stack of 8 custom CRT oscilloscopes along with a circuit bent video processor, providing visuals all in synchronisation with the DJ’s.
+            </p>
+            <div class="imagecon1">
+              <img src="img/asset6.png" alt="pic1">
+
+              <img src="img/asset7.png" alt="pic2">
+            </div>
+
+            <div style="padding:6vh 0 0 0;"class="imagecon2">
+            <video src="mov/IMG_067823.mov" autoplay muted controls loop>
+            </video>
+              <video id="v0" tabindex="0" autobuffer preload>
+                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="mov/output1.mp4"></source>
+              </video>
+              <img src="img/asset37.jpeg" alt="">
+            </div>
+            <p style="padding:6vh 0 0 0;">The circuit bent video processor was built by short circuiting the circuit board, creating new electrical pathways that resulted in the processor creating glitchy iridescent visuals. Many of these visuals may be rather tame, like a blur or slight colour change, but combined they can create vibrant colours and stable distortions which result in something quite beautiful. A vacrol, a simple combination of an LDR and LED, was also placed in the circuit so the visuals could be controlled via an audio input to make the visuals audio reactive, one for both low and high frequencies as seen below.
+            </p>
+            <div class="phototriple">
+              <video src="mov/output5.mp4" autoplay muted controls loop>
+              </video>
+              <img src="img/asset15.jpg" alt="pic1">
+
+
+              <video src="mov/output6.mp4" autoplay muted controls loop>
+              </video>
+            </div>
+            <p style="padding:0 0 0 0;">The modified CRT TV’s were made by modifying the signals being fed into the cathode ray tube. Where the tube would usually receive encoded video signals for horizontal and vertical scans to produce an image, the ray is highjacked, so the horizontal scan lines are cut and the vertical input now has an amplified audio signal being fed into it, allowing the tube to paint a transverse wave onto the screen resulting in the wave you see. A small magnet is also placed on the tube to disperse the electrons as they hit the phosphor coated screen, resulting in a wave which is split into it's RGB components. A small digital amplifier is used to amplify the audio, with easy access inputs placed into the back of the TV’s.
+            </p>
+            <div class="phototriple">
+              <img src="img/asset35.jpeg" alt="img1">
+              <img src="img/asset36.jpeg" alt="img1">
+              <img src="img/asset34.jpeg" alt="img1">
+            </div>
+            <img style="padding:0 0 6vh 0;"src="boielrroomdiagram.png" alt="">
+            <p>Altogether the project was a success with no technical difficulties during the night as a result of extensive testing of the equipment and thorough logistical planning beforehand, staying within budget despite the complexity of the equipment needed.</p>
+        </div>
+    </div>
+
+    <!-- Popup for Kaleidoscope -->
+    <div class="popup p2" id="popup2">
+        <div class="popup-content popup-content2">
+          <span class="close">&times;</span>
+          <div id="bound-one" class="scroll-bound">
+            <div class="content">
+              <h1>The Kaleidscope Festival</h1>
+              <h2>2021</h2>
+              <video width="600" muted preload>
+                <source src="mov/output3.mp4" type="video/mp4">
+                <p>Your user agent does not support the HTML5 Video element.</p>
+              </video>
+              <h1 style="  font-family: 'Gustavo';
+                font-size: 300%;
+                font-weight: bold;">A Rave...</h1>
+            </div>
+          </div>
+          <div class="p8">
+            <h1>...In a Maze</h1>
+            <p style="padding:6vh 0 0 0;">The Kaleidoscope 2021 was the second edition of our festival, bringing our iconic maze layout to the forefront of the event. Filled with 2 stages and 6 different art areas curated by ourselves and friends, the 2 day event hosted live musicians, workshops, talks and the freshest DJ’s from the UK’s electronic music scene.</p>
+            <div class="phototriple">
+              <img src="img/asset11.jpg" alt="img1">
+              <img src="img/asset12.jpg" alt="img1">
+              <img src="img/asset5.jpeg" alt="img1">
+            </div>
+            <video src="mov/video17.mp4" autoplay muted controls loop>
+            </video>
+              <p style="padding:6vh 0 6vh 0;">Built over a week, we constructed the maze with 300 fencing panels adorned with artwork ready for the 400 person crowd, battling rain and hail to make the event a success. Working on a budget and with limited professional experience we had to learn a multitude of new skills, including power distribution, working with DMX, liaising with the council/police and much more.</p>
+              <div class="photodouble">
+                <img src="img/asset32.jpg" alt="img1">
+                <img src="img/asset25.jpg" alt="img1">
+              </div>
+              <div class="phototriple">
+                <img src="img/asset33.jpg" alt="img1">
+                <img src="img/asset26.jpg" alt="img1">
+                <img src="img/asset29.jpg" alt="img1">
+              </div>
+              <p style="padding:0 0 6vh 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum eget metus eget vulputate. Nunc tincidunt enim id sollicitudin commodo. Fusce scelerisque ligula sed dui tincidunt, id malesuada urna sodales. Duis vitae tortor tortor. Quisque eget leo a enim egestas euismod. Aenean enim lacus, semper eu mi id, vulputate pellentesque ex. Proin ut lorem in felis suscipit vestibulum eget id est.</p>
+          </div>
+          <div class="p8">
+            <h1>The Kaleidscope 2022</h1>
+            <p style="padding:6vh 0 6vh 0;">The third edition of our intimate 500 capacity festival in the heart of the Wiltshire countryside. Our biggest lineup yet, featuring DJs from across the spectrum of the electronic music scene, including Dr Banana, LUXE, Riz La Teef, Papa Nugs, Napes, DJ Love and Sophia Violet. Our two main stages were hand built, with one being  converted from a disused school bus. We also invited our good friends at Aurora Sound to host their own stage spotlighting their network of female, non-binary and LGBTQ+ talent. </p>
+            <video src="mov/video12.mp4" autoplay muted controls loop>
+            </video>
+            <div class="phototriple">
+              <img src="img/asset17.jpg" alt="img1">
+              <img src="img/asset18.jpg" alt="img1">
+              <img src="img/asset19.jpg" alt="img1">
+            </div>
+              <p style="padding:0;">Hosted on the same site, we built upon the skills we learnt the previous year prioritising stage/set design and an increased focus on workshops and talent as well as adding a third day. The build this time took 2 weeks, managing a team of 20 friends lending their expertise from erecting safe structures to sound checks and proper audio setup.</p>
+              <div class="phototriple">
+                <img src="img/asset40.jpg" alt="img1">
+                <img src="img/asset24.jpg" alt="img1">
+                <img src="img/asset25.png" alt="img1">
+              </div>
+              <div class="photodouble">
+                <img src="img/asset20.jpg" alt="img1">
+                <img src="img/asset21.jpg" alt="img1">
+              </div>
+              <p style="padding:6vh 0 6vh 0;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum eget metus eget vulputate. Nunc tincidunt enim id sollicitudin commodo. Fusce scelerisque ligula sed dui tincidunt, id malesuada urna sodales. Duis vitae tortor tortor. Quisque eget leo a enim egestas euismod. Aenean enim lacus, semper eu mi id, vulputate pellentesque ex. Proin ut lorem in felis suscipit vestibulum eget id est.</p>
+              <a href="https://www.babystepmagazine.com/single-post/a-family-of-ravers-kaleidoscope-festival-2022-review" target=”_blank”><h3>Check out the festival review!</h3></a>
+          </div>
+        </div>
+    </div>
+
+    <!-- Popup for Alter Festival -->
+    <div class="popup p3" id="popup3">
+        <div class="popup-content popupalter">
+          <span class="close">&times;</span>
+          <h1 class="popuph" style="padding:0 0 6vh 0;">Alter Festival</h1>
+          <div class="alterintro">
+            <p>Alter festival was created out of a desire to craft an experience that provides an escape from the alienation + rampant individualism of modem society, through fostering a sense of community via workshops, yoga classes, supper clubs, pub quizzes and much more. We curated the lineup to better represent the wider electronic music community, with female, POC and LGBTQ+ Dj’s at the forefront of our programme.</p>
+            <div class="phototriple">
+              <img src="img/asset9.jpg" alt="img1">
+              <img src="img/asset4.jpeg" alt="img1">
+              <img src="img/asset10.jpg" alt="img1">
+            </div>
+            <p>The theme surrounding the event was based around synesthesia where we tried to link different senses and forge relationships between them. This was to be done though interactive installation pieces around the event and creative set design, from planning a stage modelled around a Tesco to an oscilloscope arcade machine that plays musical waveforms instead of games.</p>
+            <video src="mov/video10.mp4" autoplay muted controls loop>
+
+            </video>
+            <p style="padding:0 0 6vh 0;">Unfortunately due to current climate of starting an independent festival in 2024, from operational costs to the cost of living crisis warranting last minute ticket sales, we had to cancel a month before the event. However heartbreaking this was, I still wanted to share the thought process, designs and prototypes created in preparation.
+            </p>
+            <a href="https://mixmag.net/read/alter-festival-launches-announces-phase-one-line-up-news" target=”_blank”><h3>Our mention in MixMag!</h3></a>
+
+          </div>
+
+
+
+          <div class="oscilloscope">
+            <h2 style="padding:0 0 6vh 0;">Concept one: The Synth Box</h2>
+            <p style="padding-bottom:6vh;">The 'Synth box' was conceptualised to allow attendees to visualise live waveforms in a way to experience music/sound through a visual medium. The design is based around an arcade machine, except instead of games you can play a modified CRT TV turned into an oscilloscope controlled by a synthesiser. The synthesiser (schematic below) is made up of an LFO, envelope and filter based on the Arduino mozzi library. Audio signals are sent from the Arduino, through an amplifier and into the TV where the original encoded video X/Y inputs have been modified to take audio signals producing a transverse wave on the TV, like the one seen in my boilerroom project.</p>
+            <div class="oscilloscopepics">
+              <img src="crtarcade.png" alt="">
+              <p></p>
+              <img src="crtarcademachine.png" alt="">
+            </div>
+            <h3 style="z-index:100; cursor:pointer; margin:6vh 0 0 0;"id="codeLink">Check out the code here!</h3>
+
+                      <!-- Popup for the code link -->
+                      <div class="popupcode p5code" id="popup5">
+              <div class="popup-content popup-content-code" >
+                  <h2>Arduino Script</h2>
+                  <pre>
+                    <code>
+                    // Sample code
+                    #include <MIDI.h>
+                    #include <MozziGuts.h>
+                    #include <Oscil.h>
+                    #include <mozzi_midi.h>
+                    #include <ADSR.h>
+                    #include <LowPassFilter.h>
+                    #include <AutoMap.h>
+                    #include <tables/saw2048_int8.h>
+                    #include <tables/square_no_alias_2048_int8.h>
+                    #include <tables/cos2048_int8.h>
+                    #include <StateVariable.h>
+                    #include <mozzi_rand.h>
+
+                    Oscil<COS2048_NUM_CELLS, CONTROL_RATE> kFilterMod(COS2048_DATA);
+                    StateVariable <NOTCH> svf;
+
+                    #define LFOratePot A1
+                    AutoMap LFOratePotMap(0, 1023, 40, 750);
+
+                    #define LFOresPot A0
+                    AutoMap LFOresPotMap(0, 1023, 40, 180);
+
+                    LowPassFilter lpf;
+
+                    MIDI_CREATE_DEFAULT_INSTANCE();
+
+                    #define WAVE_SWITCH 2
+                    #define LFO_ON_OFF_SWITCH 3
+
+                    #define atkPot A5
+                    AutoMap atkPotMap(0, 1023, 0, 3000);
+                    #define dkyPot A4
+                    AutoMap dkyPotMap(0, 1023, 0, 3000);
+
+                    #define cutoffPot A2
+                    AutoMap cutOffPotMap(0, 1023, 20, 250);
+
+                    #define resPot A3
+                    AutoMap resFreqPotMap(0, 1023, 40, 210);
+
+                    #define CONTROL_RATE 128
+
+                    Oscil<SAW2048_NUM_CELLS, AUDIO_RATE> oscil1;
+                    Oscil<SQUARE_NO_ALIAS_2048_NUM_CELLS, AUDIO_RATE> oscil2;
+
+                    ADSR<CONTROL_RATE, AUDIO_RATE> envelope;
+
+                    #define LED 13
+
+                    void HandleNoteOn(byte channel, byte note, byte velocity) {
+                      oscil1.setFreq(mtof(float(note)));
+                      envelope.noteOn();
+                      digitalWrite(LED,HIGH);
+                    }
+
+                    void HandleNoteOff(byte channel, byte note, byte velocity) {
+                      envelope.noteOff();
+                      digitalWrite(LED,LOW);
+                    }
+
+                    void setup() {
+                      pinMode(LED, OUTPUT);
+                      MIDI.setHandleNoteOn(HandleNoteOn);
+                      MIDI.setHandleNoteOff(HandleNoteOff);
+                      MIDI.begin(MIDI_CHANNEL_OMNI);
+                      envelope.setADLevels(255, 64);
+                      oscil1.setFreq(440);
+                      kFilterMod.setFreq(1.3f);
+                      pinMode(WAVE_SWITCH, INPUT_PULLUP);
+                      pinMode(LFO_ON_OFF_SWITCH, INPUT_PULLUP);
+                      startMozzi(CONTROL_RATE);
+                    }
+
+                    void updateControl(){
+                      MIDI.read();
+
+                      envelope.setTimes(
+                        atkPotMap(mozziAnalogRead(atkPot)),
+                        60000,
+                        60000,
+                        dkyPotMap(mozziAnalogRead(dkyPot))
+                      );
+                      envelope.update();
+
+                      lpf.setResonance(resFreqPotMap(mozziAnalogRead(resPot)));
+                      lpf.setCutoffFreq(cutOffPotMap(mozziAnalogRead(cutoffPot)));
+
+                      int LFOrateVal = LFOratePotMap(mozziAnalogRead(LFOratePot));
+                      int LFOresVal = LFOresPotMap(mozziAnalogRead(LFOresPot));
+
+                      if (digitalRead(LFO_ON_OFF_SWITCH) == HIGH) {
+                        if (rand(CONTROL_RATE / 2) == 0) {
+                          kFilterMod.setFreq(LFOrateVal / 64);
+                        }
+                        svf.setCentreFreq(2200 + kFilterMod.next() * 12);
+                        svf.setResonance(LFOresVal);
+                      } else {
+                        svf.setCentreFreq(0);
+                        svf.setResonance(200);
+                      }
+
+                      oscil1.setTable(digitalRead(WAVE_SWITCH) == HIGH ? SAW2048_DATA : SQUARE_NO_ALIAS_2048_DATA);
+                    }
+
+                    int updateAudio() {
+                      int asig = (envelope.next() * oscil1.next()) >> 10;
+                      int asigSVF = svf.next(asig);
+                      int asigLPF = lpf.next(asigSVF);
+                      return asigLPF;
+                    }
+
+                    void loop() {
+                      audioHook();
+                    }
+                    </code>
+                  </pre>
+                  <h4 class="closeCodePopup" id="closeCodePopup">Close</h4>
+              </div>
+            </div>
+          </div>
+          <div class="djpressure">
+            <h2 style="padding:0 0 6vh 0;">Concept two: DJ Pressure Board</h2>
+            <p style="padding-bottom:6vh;">The DJ pressure board was a concept for an alternative way of playing with music loops through group interaction, rather than through a singular person on DJ decks.
+              8 different pressure plates are set up through an Arduino, and then sent to a raspberry pi with a python script that plays 8 predetermined loops of layers of a song, where if all 8 pressure plates are activated it plays the entire song in full.</p>
+            <div class="oscilloscopepics">
+              <img src="" alt="">
+              <p></p>
+              <img src="djpressureboard.png" alt="">
+            </div>
+            <h3 style="z-index:100; cursor:pointer; margin:6vh 0 0 0;"id="codeLink">Check out the code here!</h3>
+
+            <!-- Popup for the code link -->
+            <div class="popupcode p5code" id="popup5">
+              <div class="popup-content popup-content-code" >
+        <h2>Python Script</h2>
+        <pre>
+          <code>
+            import pygame
+            import sys
+
+            # Initialize Pygame and Pygame Mixer
+            pygame.init()
+            pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=512)
+
+            # Load your music loops
+            loop1 = pygame.mixer.Sound('/python/breaks2.ogg')
+            loop2 = pygame.mixer.Sound('/python/wobble1.ogg')
+            loop3 = pygame.mixer.Sound('/python/wobble2.ogg')
+            loop4 = pygame.mixer.Sound('/python/vocal.ogg')
+            loop5 = pygame.mixer.Sound('/python/percussion.ogg')
+            loop6 = pygame.mixer.Sound('/python/hihats.ogg')
+            loop7 = pygame.mixer.Sound('/python/breaks3.ogg')
+            loop8 = pygame.mixer.Sound('/python/melody.ogg')
+            # ... Load other loops similarly
+
+            # Assign each loop to a separate channel and start playing in muted state
+            channels = [pygame.mixer.Channel(i) for i in range(6)]
+            loops = [loop1, loop2, loop3, loop4, loop5, loop6, loop7, loop8] # ... Add other loops here
+            for channel, loop in zip(channels, loops):
+                channel.play(loop, loops=-1)
+                channel.set_volume(0)  # Start muted
+
+            # Function to toggle a loop's mute state
+            def toggle_mute(channel):
+                if channel.get_volume() > 0:
+                    channel.set_volume(0)
+                else:
+                    channel.set_volume(1)
+
+            # Main function to handle key presses
+            def main():
+                running = True
+                while running:
+                    for event in pygame.event.get():
+                        if event.type == pygame.QUIT:
+                            running = False
+
+                        # Handle key presses
+                        if event.type == pygame.KEYDOWN:
+                            if pygame.K_1 <= event.key <= pygame.K_6:
+                                toggle_mute(channels[event.key - pygame.K_1])
+                            elif event.key == pygame.K_q:
+                                running = False
+
+                pygame.quit()
+                sys.exit()
+
+            # Run the main function
+            if __name__ == "__main__":
+                main()
+
+          </code>
+        </pre>
+        <h4 id="closeCodePopup">Close</h4>
+    </div>
+          </div>
+          </div>
+
+          <div class="otherstuff">
+            <h2 style="padding:6vh 0 6vh 0;">Other Experimentation</h2>
+              <div class="photodouble">
+                <video src="mov/video152.MOV" autoplay muted controls loop></video>
+                <p style="padding: 0 6vh 0 6vh;">Touch designer was also to be used to produce powerful visualisations, from glitch style visuals with audio reactivity to using motion sensor input to create interactive figures affected by the attendee.</p>
+                <video src="mov/video16.mov" autoplay muted controls loop></video>
+              </div>
+
+          </div>
+
+
+          </div>
+        </div>
+        </div>
+    </div>
+
+
+    <div class="popup p4" id="popup4">
+        <div class="popup-content">
+          <div class="videosticky">
+            <video id="v1" tabindex="0" autobuffer preload>
+              <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="mov/output3.mp4"></source></video>
+        </div>
+        <div class="content1">
+        </div>
+        </div>
+    </div>
+
+    <div class="popup p5" id="popup5">
+  <div class="popup-content" id="popupContent">
+
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const registerPopupVideoScroll = (popupId, videoId) => {
+    const popupContent = document.getElementById(popupId);
+    const video = document.getElementById(videoId);
+
+    if (!popupContent || !video) {
+      return;
+    }
+
+    popupContent.addEventListener('scroll', () => {
+      const scrollPercentage = popupContent.scrollTop / (popupContent.scrollHeight - popupContent.clientHeight);
+      video.currentTime = scrollPercentage * video.duration;
+    });
+  };
+
+  registerPopupVideoScroll('popup4', 'v1');
+  registerPopupVideoScroll('popup1', 'v0'); // Assuming you want to keep the functionality for popup1 as well]
+
+});
+
+</script>
+<script>
+const registerVideo = (bound, video) => {
+	bound = document.querySelector(bound);
+	video = document.querySelector(video);
+	const scrollVideo = ()=>{
+		if(video.duration) {
+			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+
+			video.currentTime = video.duration * percentScrolled;
+		}
+		requestAnimationFrame(scrollVideo);
+	}
+	requestAnimationFrame(scrollVideo);
+}
+
+
+registerVideo("#bound-one", "#bound-one video");
+
+registerVideo("#bound-two", "#bound-two video")
+
+registerVideo("#bound-three", "#bound-three video")
+</script>
+  </body>
+
+
+<!-- good script with shit .popup background auimation
+    <script>
+
+            const scrollableElement = document.getElementById('scrollableElement');
+            scrollableElement.addEventListener('wheel', (ev) => {
+                ev.preventDefault();
+                scrollableElement.scrollLeft += ev.deltaY + ev.deltaX;
+            });
+
+            // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 300);
+                }
+            });
+
+            // Popup functionality
+            const popups = document.querySelectorAll('.popup');
+            const slides = document.querySelectorAll('.slide');
+
+            slides.forEach(slide => {
+                slide.addEventListener('click', () => {
+                    const popupId = slide.getAttribute('data-popup');
+                    const popup = document.getElementById(popupId);
+                    const popupContent = popup.querySelector('.popup-content');
+                    popup.style.display = 'block';
+                    popupContent.classList.add('slide-in');
+
+
+
+                    const closeBtn = popup.querySelector('.popup-content');
+                    closeBtn.addEventListener('click', () => {
+                        popupContent.classList.remove('slide-in');
+                        popupContent.classList.add('slide-out');
+                        popupContent.addEventListener('animationend', () => {
+                            popup.style.display = 'none';
+                            popupContent.classList.remove('slide-out');
+                        }, { once: true });
+                    });
+                });
+            });
+
+</script> --->
+<script>
+
+  const scrollableElement = document.getElementById('scrollableElement');
+  scrollableElement.addEventListener('wheel', (ev) => {
+      ev.preventDefault();
+      scrollableElement.scrollLeft += ev.deltaY + ev.deltaX;
+  });
+
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+      if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          $('html, body').animate({
+              scrollTop: $(hash).offset().top
+          }, 300);
+      }
+  });
+</script>
+<script>
+// Popup functionality
+const popups = document.querySelectorAll('.popup');
+const popupContents = document.querySelectorAll('.popup-content');
+const closeBtns = document.querySelectorAll('.close');
+
+// Show popup on slide click
+document.querySelectorAll('.slide').forEach(slide => {
+  slide.addEventListener('click', () => {
+    const popupId = slide.getAttribute('data-popup');
+    const popup = document.getElementById(popupId);
+    const popupContent = popup.querySelector('.popup-content');
+    popup.style.display = 'block';
+    popupContent.classList.add('slide-in');
+  });
+});
+
+// Close popup by clicking on the popup overlay
+popups.forEach(popup => {
+  popup.addEventListener('click', (event) => {
+    if (event.target === popup) {
+      const popupContent = popup.querySelector('.popup-content');
+      popupContent.classList.remove('slide-in');
+      popupContent.classList.add('slide-out');
+      popupContent.addEventListener('animationend', () => {
+        popup.style.display = 'none';
+        popupContent.classList.remove('slide-out');
+      }, { once: true });
+    }
+  });
+});
+
+// Close popup by clicking on the close button
+closeBtns.forEach(closeBtn => {
+  closeBtn.addEventListener('click', () => {
+    const popupContent = closeBtn.closest('.popup-content');
+    const popup = closeBtn.closest('.popup');
+    popupContent.classList.remove('slide-in');
+    popupContent.classList.add('slide-out');
+    popupContent.addEventListener('animationend', () => {
+      popup.style.display = 'none';
+      popupContent.classList.remove('slide-out');
+    }, { once: true });
+  });
+});
+
+      </script>
+  <!--    <script>
+        const scrollableElement = document.getElementById('scrollableElement');
+        scrollableElement.addEventListener('wheel', (ev) => {
+          ev.preventDefault();
+          scrollableElement.scrollLeft += ev.deltaY + ev.deltaX;
+        });
+
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+          // Ensure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Use jQuery's animate() method to add smooth page scroll
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 300);
+          }
+        });
+
+        // Popup functionality
+        const popup = document.getElementById('popup');
+        const popupContent = document.querySelector('.popup-content');
+        const closeBtn = document.querySelector('.popup');
+
+        // Show popup on first slide click
+        document.querySelector('.slide').addEventListener('click', () => {
+          popup.style.display = 'block';
+          popupContent.classList.add('slide-in');
+        });
+
+        // Close popup
+        closeBtn.addEventListener('click', () => {
+          popupContent.classList.remove('slide-in');
+          popupContent.classList.add('slide-out');
+          popupContent.addEventListener('animationend', () => {
+            popup.style.display = 'none';
+            popupContent.classList.remove('slide-out');
+          }, { once: true });
+        });
+</script> --->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Popup functionality for the code link
+    const codeLink = document.getElementById('codeLink');
+    const codePopup = document.getElementById('popup5');
+    const closePopupBtn = document.getElementById('closeCodePopup'); // Target the specific close button
+
+    // Open popup when the link is clicked
+    codeLink.addEventListener('click', () => {
+        codePopup.style.display = 'block';
+        codePopup.classList.add('slide-in');
+        codePopup.querySelector('.popup-content').classList.add('slide-in');
+    });
+
+    // Close popup when the close button is clicked
+    closePopupBtn.addEventListener('click', () => {
+        codePopup.classList.remove('slide-in');
+        codePopup.classList.add('slide-out');
+        codePopup.querySelector('.popup-content').classList.remove('slide-in');
+        codePopup.querySelector('.popup-content').classList.add('slide-out');
+        codePopup.querySelector('.popup-content').addEventListener('animationend', () => {
+            codePopup.style.display = 'none';
+            codePopup.classList.remove('slide-out');
+            codePopup.querySelector('.popup-content').classList.remove('slide-out');
+        }, { once: true });
+    });
+});
+</script>
+</html>
