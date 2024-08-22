@@ -30,6 +30,7 @@ body, html {
   height: 100%; /* Ensure the body takes full height */
   max-height: 100%;
   overflow-y: hidden; /* Hide vertical scrollbar */
+  color: #251515;
 }
 
 div::-webkit-scrollbar {
@@ -95,7 +96,7 @@ h4 {
 
 a {
   text-decoration: none; /* no underline */
-  color: black;
+  color: #251515;
   cursor: pointer;
 }
 
@@ -166,7 +167,7 @@ a:hover {
 }
 
 .slideempty {
-  width: 600px;
+  width: 650px;
   min-width: 550px;
   height: 550px;
   flex-shrink: 0; /* Prevent slides from shrinking */
@@ -178,14 +179,24 @@ a:hover {
   justify-content: flex-start;
   text-align: left;
   font-family: 'roboto';
-  font-size: 25px;
+  font-size: 22px;
   flex-direction: column;
 }
 
 .slideemptyul {
   display: flex;
   flex-direction: row;
+  text-align: left;
+  font-family: 'roboto';
+  font-size: 25px;
+  width: 100%;
+  justify-content: flex-start;
 }
+
+.slideemptyul2 {
+    font-size: 22px;
+}
+
 
 .slideactivator {
   opacity:0;
@@ -208,7 +219,7 @@ a:hover {
 
 .slidep {
   background-color: white;
-  color: black;
+  color: #251515;
   cursor: auto;
 }
 
@@ -268,6 +279,15 @@ a:hover {
   font-size: 4em;
   cursor: pointer;
   z-index: 1000;
+}
+
+.close1 {
+  position: absolute;
+  top: -4vh;
+  right: -4vh;
+  font-size: 4em;
+  cursor: pointer;
+  z-index: 10000;
 }
 
 .popupcode {
@@ -417,7 +437,7 @@ a:hover {
 	.content {
 		width: 100%;
 		position: sticky;
-		top:0px;
+		top:20px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -541,6 +561,12 @@ a:hover {
   max-width: 100%;
 }
 
+.opressurepics {
+  display: grid;
+  grid-template-columns: 1fr 0.2fr 1fr;
+  max-width: 100%;
+}
+
 .oscilloscope img {
   height: 100%;
   width: 100%;
@@ -581,4 +607,8 @@ a:hover {
   flex-direction: column;
   justify-content:center;
   align-items: center;
+}
+
+.pdouble {
+  justify-content: space-around;
 }
