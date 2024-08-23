@@ -1,4 +1,4 @@
-&gt<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <title>Portfolio</title>
@@ -7,7 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
-
+    <div id="loading-spinner">
+      <div class="spinner"></div>
+    </div>
       <div class="container">
 
         <div class="header" id="indicator">
@@ -139,6 +141,10 @@
             </div>
             <img style="padding:0 0 6vh 0;"src="boielrroomdiagram.png" alt="">
             <p>Altogether the project was a success, with no technical difficulties during the night as a result of extensive testing of the equipment and thorough logistical planning beforehand, staying within budget despite the complexity of the equipment needed. Audience behaviour was also considered, with cabling being hidden to prevent it from being damaged and raising the TV’s so they could be seen in a room filled with 600 people.</p>
+            <div class="socials">
+              <a href="https://www.instagram.com/wax.palace/?hl=en" target=”_blank”><h3 style="padding:0 3vh 0 0;">Socials</h3></a>
+              <a href="https://waxpalace.co.uk" target=”_blank”><h3 style="padding:0 0 0 3vh;">Website</h3></a>
+            </div>
         </div>
     </div>
 
@@ -226,6 +232,10 @@
               </div>
               <p style="padding:6vh 0 6vh 0;">The workload meant 20+ hour days during the event, however we managed to succeed in ensuring the festival ran smoothly with no incidences of power shutting off or people getting injured. The final night brought a torrential thunderstorm, something which we had not anticipated with the weather forecasting. This led to the site being partially flooded and meant we had to think on our feet to waterproof sections we did not anticipate would need waterproofing, eventually managing to ensure all the sound equipment was watertight through tarps, tents and elevating amplifiers. Whilst it proved extremely stressful achieving this, it meant a very memorable night for the attendees, providing a background of techno and lightning to end the 3 days.</p>
               <a href="https://www.babystepmagazine.com/single-post/a-family-of-ravers-kaleidoscope-festival-2022-review" target=”_blank”><h3>Check out the festival review!</h3></a>
+              <div class="socials">
+                <a href="https://www.instagram.com/wax.palace/?hl=en" target=”_blank”><h3 style="padding:0 3vh 0 0;">Socials</h3></a>
+                <a href="https://waxpalace.co.uk" target=”_blank”><h3 style="padding:0 0 0 3vh;">Website</h3></a>
+              </div>
           </div>
         </div>
     </div>
@@ -475,6 +485,10 @@
                 <video src="mov/video152.mp4" autoplay muted controls loop></video>
                 <video src="mov/video16.mp4" autoplay muted controls loop></video>
               </div>
+          </div>
+          <div class="socials">
+            <a href="https://www.instagram.com/alterfestivaluk/?hl=en" target=”_blank”><h3 style="padding:0 3vh 0 0;">Socials</h3></a>
+            <a href="https://alterfestival.co.uk/" target=”_blank”><h3 style="padding:0 0 0 3vh;">Website</h3></a>
           </div>
 
 
@@ -744,6 +758,19 @@ document.addEventListener('DOMContentLoaded', () => {
             otherPopup.querySelector('.popup-content').classList.remove('slide-out');
         }, { once: true });
     });
+});
+</script>
+<script>
+// Wait for the entire page to load
+window.addEventListener('load', () => {
+  // Get the spinner element
+  const spinner = document.getElementById('loading-spinner');
+  // Fade out the spinner and then remove it from the DOM
+  spinner.style.opacity = '0';
+  spinner.style.transition = 'opacity 0.5s ease-out';
+  setTimeout(() => {
+    spinner.style.display = 'none';
+  }, 500); // Match this with the transition duration
 });
 </script>
 </html>
