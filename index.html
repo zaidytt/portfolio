@@ -115,7 +115,7 @@
             <div style="padding:6vh 0 0 0;"class="imagecon2">
             <video src="mov/IMG_067823.mp4" autoplay muted controls loop>
             </video>
-              <video id="v0" tabindex="0" autobuffer preload>
+              <video id="v0" tabindex="0" autobuffer preload playsinline muted>
                 <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="mov/output1.mp4"></source>
               </video>
               <img src="img/asset37.jpeg" alt="">
@@ -509,48 +509,49 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    popupContent.addEventListener('scroll', () => {
-      const scrollPercentage = popupContent.scrollTop / (popupContent.scrollHeight - popupContent.clientHeight);
-      video.currentTime = scrollPercentage * video.duration;
-    });
+    // Allow video to play inline on iOS Safari
+    video.setAttribute('playsinline', true);
+
+    // Ensure video can be manipulated after user interaction
+    const enableVideoControl = () => {
+      popupContent.addEventListener('scroll', () => {
+        const scrollPercentage = popupContent.scrollTop / (popupContent.scrollHeight - popupContent.clientHeight);
+        video.currentTime = scrollPercentage * video.duration;
+      });
+      popupContent.removeEventListener('touchstart', enableVideoControl);
+    };
+
+    // Add event listener for touchstart to initiate video control
+    popupContent.addEventListener('touchstart', enableVideoControl);
   };
 
   registerPopupVideoScroll('popup4', 'v1');
   registerPopupVideoScroll('popup1', 'v0');
-
 });
-
 </script>
 <script>
 const registerVideo = (bound, video) => {
-    bound = document.querySelector(bound);
-    video = document.querySelector(video);
+	bound = document.querySelector(bound);
+	video = document.querySelector(video);
+	const scrollVideo = ()=>{
+		if(video.duration) {
+			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
 
-    const scrollVideo = () => {
-        if (video.readyState >= 2) { // Check if the video has enough data to play
-            const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
-            const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
-            const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
-
-            video.currentTime = video.duration * percentScrolled;
-        }
-        requestAnimationFrame(scrollVideo);
-    }
-
-    // iOS Safari may require user interaction before allowing video play, so we add this listener.
-    video.addEventListener('canplay', () => {
-        requestAnimationFrame(scrollVideo);
-    });
-
-    // Attempt to start the loop if the video is already ready
-    if (video.readyState >= 2) {
-        requestAnimationFrame(scrollVideo);
-    }
+			video.currentTime = video.duration * percentScrolled;
+		}
+		requestAnimationFrame(scrollVideo);
+	}
+	requestAnimationFrame(scrollVideo);
 }
 
+
 registerVideo("#bound-one", "#bound-one video");
-registerVideo("#bound-two", "#bound-two video");
-registerVideo("#bound-three", "#bound-three video");
+
+registerVideo("#bound-two", "#bound-two video")
+
+registerVideo("#bound-three", "#bound-three video")
 </script>
   </body>
 
