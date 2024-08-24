@@ -113,17 +113,18 @@
             </div>
 
             <div style="padding:6vh 0 0 0;"class="imagecon2">
-            <video src="mov/IMG_067823.mp4" autoplay muted controls loop>
+            <video src="mov/IMG_067823.mp4" autoplay muted controls playsinline preload loop>
             </video>
-              <video id="v0" tabindex="0" autobuffer preload playsinline muted>
-                <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="mov/output1.mp4"></source>
-              </video>
+            <video id="v0" tabindex="0" autoplay muted controls playsinline preload="auto">
+              <source src="mov/output1.mp4" type="video/mp4;codecs='avc1.42E01E, mp4a.40.2'">
+              Your browser does not support the video tag.
+            </video>
               <img src="img/asset37.jpeg" alt="">
             </div>
             <p style="padding:6vh 0 0 0;">The circuit bent video processor was built by short circuiting the circuit board, creating new electrical pathways that resulted in the processor creating glitchy iridescent visuals. Many of these visuals may be rather tame, like a blur or slight colour change, but combined they can create vibrant colours and stable distortions which result in something quite beautiful. A vacrol, a simple combination of an LDR and LED, was also placed in the circuit so the visuals could be controlled via an audio input to make the visuals audio reactive, one for both low and high frequencies as seen below.
             </p>
             <div class="phototriple">
-              <video src="mov/output5.mp4" autoplay muted controls loop>
+              <video src="mov/output5.mp4" autoplay muted controls playsinline preload loop>
               </video>
               <img src="img/asset15.jpg" alt="pic1">
 
@@ -156,7 +157,7 @@
               <span class="close close1">&times;</span>
               <h1>The Kaleidscope Festival</h1>
               <h2 style="text-align:center;">2021</h2>
-              <video width="600" muted preload>
+              <video width="600" autoplay muted controls playsinline preload loop>
                 <source src="mov/output3.mp4" type="video/mp4">
                 <p>Your user agent does not support the HTML5 Video element.</p>
               </video>
@@ -501,32 +502,30 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const registerPopupVideoScroll = (popupId, videoId) => {
-    const popupContent = document.getElementById(popupId);
-    const video = document.getElementById(videoId);
+    const registerPopupVideoScroll = (popupId, videoId) => {
+        const popupContent = document.getElementById(popupId);
+        const video = document.getElementById(videoId);
 
-    if (!popupContent || !video) {
-      return;
-    }
+        if (!popupContent || !video) {
+            return;
+        }
 
-    // Allow video to play inline on iOS Safari
-    video.setAttribute('playsinline', true);
+        video.setAttribute('playsinline', true);
 
-    // Ensure video can be manipulated after user interaction
-    const enableVideoControl = () => {
-      popupContent.addEventListener('scroll', () => {
-        const scrollPercentage = popupContent.scrollTop / (popupContent.scrollHeight - popupContent.clientHeight);
-        video.currentTime = scrollPercentage * video.duration;
-      });
-      popupContent.removeEventListener('touchstart', enableVideoControl);
+        const enableVideoControl = () => {
+            popupContent.addEventListener('scroll', () => {
+                if (video.readyState >= 2) { // Check if the video is ready
+                    const scrollPercentage = popupContent.scrollTop / (popupContent.scrollHeight - popupContent.clientHeight);
+                    video.currentTime = scrollPercentage * video.duration;
+                }
+            });
+            popupContent.removeEventListener('touchstart', enableVideoControl);
+        };
+
+        popupContent.addEventListener('touchstart', enableVideoControl);
     };
 
-    // Add event listener for touchstart to initiate video control
-    popupContent.addEventListener('touchstart', enableVideoControl);
-  };
-
-  registerPopupVideoScroll('popup4', 'v1');
-  registerPopupVideoScroll('popup1', 'v0');
+    registerPopupVideoScroll('popup1', 'v0');
 });
 </script>
 <script>
