@@ -1,9 +1,9 @@
-/* Ensure this part is included in your CSS file */
+
 @font-face {
   font-family: 'Gustavo';
   src: url('fonts/Gustavo-BoldItalic.otf') format('opentype');
   font-weight: bold;
-  font-style: italic;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -26,15 +26,15 @@
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent vertical scrolling */
-  height: 100%; /* Ensure the body takes full height */
+  overflow-x: hidden;
+  height: 100%;
   max-height: 100%;
-  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-y: hidden;
   color: #251515;
 }
 
 div::-webkit-scrollbar {
-  display: none; /* for Chrome, Safari, and Opera */
+  display: none;
 }
 
 p {
@@ -53,6 +53,7 @@ h1 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   unicode-bidi: isolate;
+  font-family: 'Gustavo';
 }
 
 h2 {
@@ -64,7 +65,6 @@ h2 {
   unicode-bidi: isolate;
   font-family: 'Gustavo';
   font-weight: bold;
-  font-style: italic;
   font-size: 50px;
 }
 
@@ -77,7 +77,7 @@ h3 {
   unicode-bidi: isolate;
   font-family: 'Gustavo';
   font-weight: bold;
-  font-style: italic;
+  ;
   font-size: 25px;
 }
 
@@ -90,12 +90,12 @@ h4 {
   unicode-bidi: isolate;
   font-family: 'Gustavo';
   font-weight: bold;
-  font-style: italic;
+  ;
   font-size: 25px;
 }
 
 a {
-  text-decoration: none; /* no underline */
+  text-decoration: none;
   color: #251515;
   cursor: pointer;
 }
@@ -129,7 +129,7 @@ a:hover {
 .header p {
   font-family: 'Gustavo';
   font-weight: bold;
-  font-style: italic;
+  ;
   font-size: 100px;
 }
 
@@ -141,9 +141,9 @@ a:hover {
 }
 
 .intro {
-  height: calc(100% - 70px); /* Adjust based on header height */
-  overflow-x: auto; /* Allow horizontal overflow */
-  overflow-y: hidden; /* Prevent vertical overflow */
+  height: calc(100% - 70px);
+  overflow-x: auto;
+  overflow-y: hidden;
   display: flex;
   padding: 20vh 0 0 4vw;
   z-index: 10;
@@ -155,8 +155,8 @@ a:hover {
   width: 550px;
   min-width: 550px;
   height: 550px;
-  flex-shrink: 0; /* Prevent slides from shrinking */
-  margin-right: 2vw; /* Optional: add some space between slides */
+  flex-shrink: 0;
+  margin-right: 2vw;
   background-color: black;
   border-radius: 25px;
   cursor: pointer;
@@ -170,8 +170,8 @@ a:hover {
   width: 650px;
   min-width: 550px;
   height: 550px;
-  flex-shrink: 0; /* Prevent slides from shrinking */
-  margin-right: 4vw; /* Optional: add some space between slides */
+  flex-shrink: 0;
+  margin-right: 4vw;
   background-color: white;
   border-radius: 25px;
   position: relative;
@@ -235,7 +235,7 @@ a:hover {
   color: white;
   font-family: 'Gustavo';
   font-weight: bold;
-  font-style: italic;
+  ;
   position:absolute;
   bottom: 10%;
   text-align: center;
@@ -265,8 +265,8 @@ a:hover {
   width: 100%;
   height: 100vh;
   z-index: 10;
-  overflow: auto; /* Allow scrolling inside the popup */
-  transition: background-color 0.5s ease-in-out; /* Add transition for background color */
+  overflow: auto;
+  transition: background-color 0.5s ease-in-out;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
   cursor: pointer;
@@ -298,8 +298,8 @@ a:hover {
   width: auto;
   height: 100vh;
   z-index: 10000;
-  overflow: auto; /* Allow scrolling inside the popup */
-  transition: background-color 0.5s ease-in-out; /* Add transition for background color */
+  overflow: auto;
+  transition: background-color 0.5s ease-in-out;
   animation-duration: 0.3s;
   animation-fill-mode: forwards;
 }
@@ -316,10 +316,10 @@ a:hover {
   animation-fill-mode: forwards;
   position: relative;
   padding: 6vh;
-  height: auto; /* Set the height to 200vh */
+  height: auto;
   border-radius: 10px;
-  top: 0; /* Align to the top of the container */
-  transform: none; /* Remove any translation */
+  top: 0;
+  transform: none;
   z-index: 100;
   flex-direction: column;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -368,7 +368,6 @@ a:hover {
 
 
 .popup-content h1{
-  font-family: 'Gustavo';
   font-size: 100px;
   text-align: center;
 }
@@ -433,8 +432,9 @@ a:hover {
 .scroll-bound {
 	height: 200vh;
 
+	}
 
-	.content {
+  .content {
 		width: 100%;
 		position: sticky;
 		top:20px;
@@ -442,14 +442,14 @@ a:hover {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+}
 
-	}
 
   .content h1 {
     font-family: 'Gustavo';
     font-size: 100px;
     font-weight: bold;
-    font-style: italic;
+    ;
   }
 
 	.content video {
@@ -475,6 +475,8 @@ a:hover {
   font-size: 300%;
   font-weight: bold;
 }
+
+
 
 .p8 p {
 
@@ -537,10 +539,10 @@ a:hover {
 
 
 .videosticky video {
-  position: sticky;
+  position: -webkit-sticky;
   top: 20;
-  width: 100%; /* Adjust as needed */
-  height: auto; /* Adjust as needed */
+  width: 100%;
+  height: auto;
 }
 
 .content1 {
@@ -637,33 +639,208 @@ a:hover {
   justify-content: center;
 }
 
-/* Spinner Overlay */
+
 #loading-spinner {
   position: fixed;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
-  z-index: 9999; /* Ensure the spinner is on top of all content */
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-/* The Spinner */
+
 .spinner {
-  border: 16px solid #f3f3f3; /* Light grey border */
-  border-top: 16px solid #3498db; /* Blue border for the spinning part */
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2s linear infinite; /* Spin animation */
+  animation: spin 2s linear infinite;
 }
 
-/* Spin Animation */
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 700px) {
+  .header p {
+    font-size: 400%;
+  }
+
+  .slide {
+
+  }
+
+  .slideempty {
+    font-size: 100%;
+    width: 95vw;
+    min-width: 95vw;
+  }
+
+  .slideemptyul {
+    font-size: 100%;
+  }
+
+  .slideempty p {
+  }
+
+  .slide {
+    width: 95vw;
+    min-width: 95vw;
+    height: 95vw;
+    min-height: 95vw;
+  }
+
+  .slide img {
+        object-fit: contain;
+  }
+
+  .popup-content {
+    margin: 1vh;
+    padding:2vh;
+  }
+
+  .popup-content h3 {
+    text-align: center;
+  }
+
+  .popup-content p{
+    font-size: 100%;
+    padding: 3vh 0 3vh 0 !important;
+  }
+
+  .popup-content h1 {
+    font-size: 350% !important;
+  }
+
+  .imagecon1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .imagecon1 img {
+    height: 100%;
+    width: 100%;
+    padding: 3vh 0 0 0;
+  }
+
+  .imagecon2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagecon2 img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .imagecon2 video {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 3vh 0;
+  }
+
+  .phototriple {
+    flex-direction: column;
+    align-items: center;
+    padding: 3vh 0 0 0;
+  }
+
+  .phototriple img {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 3vh 0;
+  }
+
+  .phototriple video {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 3vh 0;
+  }
+
+  .content video {
+    width:100%;
+    height: 100%;
+    padding: 6vh 0 6vh 0;
+  }
+
+  .p8 video{
+    width:100%;
+    height: 100%;
+  }
+
+  .photodouble {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photodouble img {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 3vh 0;
+  }
+
+  .photodouble video {
+    height: 100%;
+    width: 100%;
+    padding: 0 0 3vh 0;
+  }
+
+  .description {
+    bottom: -45%;
+    opacity: 100%;
+    color: black;
+    padding: 0;
+  }
+
+  .description1 {
+    bottom: -15%;
+  }
+
+  .alterintro video {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  .oscilloscopepics {
+    display: block;
+    grid-template-rows: none;
+    max-width: 100%;
+  }
+
+  .oscilloscopepicsp {
+    display: none;
+  }
+
+  .oscilloscopepicsarcade {
+    height: 50% !important;
+    width: 50% !important;
+  }
+
+  .opressurepics {
+    display: block;
+  }
+
+  .otherstuff h2 {
+    font-size: 40px;
+  }
+
+  .close1 {
+    top: -2vh;
+    right:-2vh;
+  }
+
+  .socials {
+    margin: 6vh 0 16vh 0;
+  }
 }
