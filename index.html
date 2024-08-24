@@ -523,27 +523,34 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 <script>
 const registerVideo = (bound, video) => {
-	bound = document.querySelector(bound);
-	video = document.querySelector(video);
-	const scrollVideo = ()=>{
-		if(video.duration) {
-			const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
-			const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
-			const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+    bound = document.querySelector(bound);
+    video = document.querySelector(video);
 
-			video.currentTime = video.duration * percentScrolled;
-		}
-		requestAnimationFrame(scrollVideo);
-	}
-	requestAnimationFrame(scrollVideo);
+    const scrollVideo = () => {
+        if (video.readyState >= 2) { // Check if the video has enough data to play
+            const distanceFromTop = window.scrollY + bound.getBoundingClientRect().top;
+            const rawPercentScrolled = (window.scrollY - distanceFromTop) / (bound.scrollHeight - window.innerHeight);
+            const percentScrolled = Math.min(Math.max(rawPercentScrolled, 0), 1);
+
+            video.currentTime = video.duration * percentScrolled;
+        }
+        requestAnimationFrame(scrollVideo);
+    }
+
+    // iOS Safari may require user interaction before allowing video play, so we add this listener.
+    video.addEventListener('canplay', () => {
+        requestAnimationFrame(scrollVideo);
+    });
+
+    // Attempt to start the loop if the video is already ready
+    if (video.readyState >= 2) {
+        requestAnimationFrame(scrollVideo);
+    }
 }
 
-
 registerVideo("#bound-one", "#bound-one video");
-
-registerVideo("#bound-two", "#bound-two video")
-
-registerVideo("#bound-three", "#bound-three video")
+registerVideo("#bound-two", "#bound-two video");
+registerVideo("#bound-three", "#bound-three video");
 </script>
   </body>
 
