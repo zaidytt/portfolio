@@ -670,6 +670,10 @@ a:hover {
   100% { transform: rotate(360deg); }
 }
 
+.v5 {
+  display: none;
+}
+
 @media only screen and (max-width: 700px) {
   .header p {
     font-size: 400%;
@@ -842,5 +846,34 @@ a:hover {
 
   .socials {
     margin: 6vh 0 16vh 0;
+  }
+
+  .v0 {
+    display: none;
+  }
+
+  .v5 {
+    display: block;
+  }
+
+  .maze {
+    display: none;
+  }
+
+  .arave {
+    display: none;
+  }
+
+  .inamaze {
+    display: none;
+  }
+
+  .scroll-bound {
+    height: auto;
+  }
+
+  .description {
+    bottom: -28%;
+    font-size: 250%;
   }
 }

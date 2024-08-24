@@ -115,8 +115,11 @@
             <div style="padding:6vh 0 0 0;"class="imagecon2">
             <video src="mov/IMG_067823.mp4" autoplay muted controls playsinline preload loop>
             </video>
-            <video id="v0" tabindex="0" autoplay muted controls playsinline preload="auto">
-              <source src="mov/output1.mp4" type="video/mp4;codecs='avc1.42E01E, mp4a.40.2'">
+            <video id="v0" class="v0" tabindex="0" autobuffer preload>
+              <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="mov/output1.mp4"></source>
+            </video>
+            <video class="v5" id="v0" tabindex="0" autoplay muted controls playsinline preload="auto">
+              <source class="v5"src="mov/output1.mp4">
               Your browser does not support the video tag.
             </video>
               <img src="img/asset37.jpeg" alt="">
@@ -157,17 +160,17 @@
               <span class="close close1">&times;</span>
               <h1>The Kaleidscope Festival</h1>
               <h2 style="text-align:center;">2021</h2>
-              <video width="600" autoplay muted controls playsinline preload loop>
+              <video class="maze" width="600" muted preload>
                 <source src="mov/output3.mp4" type="video/mp4">
                 <p>Your user agent does not support the HTML5 Video element.</p>
               </video>
-              <h1 style="  font-family: 'Gustavo';
+              <h1 class="arave" style="  font-family: 'Gustavo';
                 font-size: 300%;
                 font-weight: bold; text-align:center;">A Rave...</h1>
             </div>
           </div>
           <div class="p8">
-            <h1>...In a Maze</h1>
+            <h1 class="inamaze">...In a Maze</h1>
             <p style="padding:6vh 0 0 0;">The Kaleidoscope 2021 was the second edition of our festival, bringing our iconic maze layout to the forefront of the event. Working in a team of 3 as the Site Manager, we filled with 2 stages and 6 different art areas curated by ourselves and friends, the 2 day event hosted live musicians, workshops, talks and the freshest DJ's from the UK's electronic music scene.</p>
             <div class="phototriple">
               <img src="img/asset11.jpg" alt="img1">
@@ -502,30 +505,23 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    const registerPopupVideoScroll = (popupId, videoId) => {
-        const popupContent = document.getElementById(popupId);
-        const video = document.getElementById(videoId);
+  const registerPopupVideoScroll = (popupId, videoId) => {
+    const popupContent = document.getElementById(popupId);
+    const video = document.getElementById(videoId);
 
-        if (!popupContent || !video) {
-            return;
-        }
+    if (!popupContent || !video) {
+      return;
+    }
 
-        video.setAttribute('playsinline', true);
+    popupContent.addEventListener('scroll', () => {
+      const scrollPercentage = popupContent.scrollTop / (popupContent.scrollHeight - popupContent.clientHeight);
+      video.currentTime = scrollPercentage * video.duration;
+    });
+  };
 
-        const enableVideoControl = () => {
-            popupContent.addEventListener('scroll', () => {
-                if (video.readyState >= 2) { // Check if the video is ready
-                    const scrollPercentage = popupContent.scrollTop / (popupContent.scrollHeight - popupContent.clientHeight);
-                    video.currentTime = scrollPercentage * video.duration;
-                }
-            });
-            popupContent.removeEventListener('touchstart', enableVideoControl);
-        };
+  registerPopupVideoScroll('popup4', 'v1');
+  registerPopupVideoScroll('popup1', 'v0');
 
-        popupContent.addEventListener('touchstart', enableVideoControl);
-    };
-
-    registerPopupVideoScroll('popup1', 'v0');
 });
 </script>
 <script>
