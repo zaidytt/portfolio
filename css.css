@@ -569,6 +569,17 @@ a:hover {
   max-width: 100%;
 }
 
+.opressurepics1 {
+  display: flex;
+  justify-content: center;
+}
+
+.opressurepics1 img {
+  height: 75%;
+  width: 75%;
+  object-fit: contain;
+}
+
 .oscilloscope img {
   height: 100%;
   width: 100%;
@@ -875,6 +886,11 @@ a:hover {
   .description {
     bottom: -28%;
     font-size: 250%;
+  }
+
+  .opressurepics1 img {
+    height: 100%;
+    width: 100%;
   }
 }
 
