@@ -15,10 +15,12 @@
 
         <div class="header" id="indicator">
           <p>Zade Tuaima</p>
-          <p class="arrow">&rarr;</p>
         </div>
-
+        <div id="arrow" class="arrow">
+          <p >&rarr;</p>
+        </div>
         <div class="intro" id="scrollableElement">
+
           <div class="slideempty">
             <p>Hi, I'm Zade!
             <br><br>
@@ -576,6 +578,13 @@ registerVideo("#bound-three", "#bound-three video")
           }, 300);
       }
   });
+</script>
+<script>
+    const Arrow = document.getElementById('arrow');
+    Arrow.addEventListener('wheel', (ev) => {
+        ev.preventDefault();
+        Arrow.scrollLeft -= ev.deltaY + ev.deltaX;
+    });
 </script>
 <script>
 

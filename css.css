@@ -697,12 +697,21 @@ a:hover {
 
   .header p {
     font-size: 400%;
+    margin-right: 5vw;
   }
 
   .arrow {
     display: block;
     font-size: 800% !important;
     margin-right: 4vw;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top:-1vh;
+  }
+
+  .arrow p {
+    color: #dd0051;
   }
 
   .slideempty {
@@ -910,5 +919,3 @@ a:hover {
     margin-bottom: 20vh;
   }
 }
-
-.
