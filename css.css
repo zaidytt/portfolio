@@ -730,6 +730,7 @@ a:hover {
   .arrow p {
     color: #dd0051;
     font-size: 800% !important;
+    font-weight: bold;
   }
 
   .slideempty {
