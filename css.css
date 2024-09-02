@@ -860,7 +860,7 @@ a:hover {
   }
 
   .description1 {
-    bottom: -15%;
+    bottom: -16% !important;
   }
 
   .alterintro video {
