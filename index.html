@@ -18,6 +18,7 @@
           <p class="mobile">Zade<br>Tuaima</p>
         </div>
         <div id="arrow" class="arrow">
+          <div class="arrowspace"></div>
           <p >&rarr;</p>
         </div>
         <div class="intro" id="scrollableElement">
@@ -581,11 +582,11 @@ registerVideo("#bound-three", "#bound-three video")
   });
 </script>
 <script>
-    const Arrow = document.getElementById('arrow');
-    Arrow.addEventListener('wheel', (ev) => {
-        ev.preventDefault();
-        Arrow.scrollLeft -= ev.deltaY + ev.deltaX;
-    });
+const Arrow = document.getElementById('arrow');
+Arrow.addEventListener('wheel', (ev) => {
+    ev.preventDefault();
+    Arrow.scrollLeft -= ev.deltaY + ev.deltaX; // Reverse the scroll direction
+});
 </script>
 <script>
 
