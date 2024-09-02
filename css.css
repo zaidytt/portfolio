@@ -685,13 +685,24 @@ a:hover {
   display: none;
 }
 
+.arrow {
+  display: none;
+}
+
 @media only screen and (max-width: 700px) {
+
+  .header {
+    justify-content: flex-start;
+  }
+
   .header p {
     font-size: 400%;
   }
 
-  .slide {
-
+  .arrow {
+    display: block;
+    font-size: 800% !important;
+    margin-right: 4vw;
   }
 
   .slideempty {
@@ -721,6 +732,7 @@ a:hover {
   .popup-content {
     margin: 1vh;
     padding:2vh;
+    max-width: 88vw;
   }
 
   .popup-content h3 {
@@ -891,6 +903,11 @@ a:hover {
   .opressurepics1 img {
     height: 100%;
     width: 100%;
+  }
+
+  .popup-content-code {
+    align-items:flex-start;
+    margin-bottom: 20vh;
   }
 }
 
